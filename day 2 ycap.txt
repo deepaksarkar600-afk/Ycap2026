@@ -1,0 +1,231 @@
+###array
+#include <stdio.h>
+
+int main() {
+    int arr[1]={2};
+    printf("%d",0[arr]);
+    
+    return 0;
+}
+
+
+
+
+
+###
+#include <stdio.h>
+
+int main() {
+   int arr[3],i=0;
+   for(i=0;i<3;i++){
+       arr[i]=i;
+      
+   }
+   for(i=0;i<3;i++){
+       printf("%d",arr[i]);
+   }
+    return 0;
+}
+
+
+
+###
+#include <stdio.h>
+
+int main() {
+   int arr[3],i,j;
+   arr[0]=11;
+   arr[1]=22;
+   arr[2]=33;
+   for(i=0;i<3;i++){
+        j=i;
+      
+   }
+    return 0;
+}
+
+
+
+
+###
+#include <stdio.h>
+
+int main() {
+   int arr[3],i,temp;
+   arr[0]=11;
+   arr[1]=22;
+   arr[2]=33;
+   temp=arr[0];
+   arr[0]=arr[2];
+   arr[2]=temp;
+   for(i=0;i<3;i++){
+        printf("%d",arr[i]);
+   }
+    return 0;
+}
+
+
+###
+#include <stdio.h>
+
+int main() {
+   char name[]="abcdef";
+   int i=0;
+   printf("%c",name[i]);
+   printf("%c",i[name]);
+   printf("%c",name[i+2]);
+   printf("%c",i[name+2]);
+    return 0;
+}
+
+
+###
+#include <stdio.h>
+#define arr "abcd"
+
+int main() {
+   printf("%c",arr[2]);
+ 
+    return 0;
+}
+
+
+
+###garbage value
+#include <stdio.h>
+
+int main() {
+    int arr[2]={1,2,3,4,5};
+   printf("%d",arr[3]);
+ 
+    return 0;
+}
+
+####
+#include <stdio.h>  
+int main ()  
+{   
+ int i,j;  
+ int matrix[4][3] = {{1, 2, 3},   
+                    {4, 5, 6},   
+                    {7, 8, 9},   
+                    {10, 11, 12}};   
+    for (i = 0; i < 4; i++)     {  
+        for (j = 0; j < 3; j++)    {  
+            printf("%d\t", matrix[i][j]);  
+        }  
+        printf("\n");  
+    }  
+    return 0;   
+} 
+
+
+#####
+
+#include<stdio.h>
+int function(int,int);
+int main(){
+    int a=25,b=24+1,c;
+printf("%d",function(a,b));
+return 0;
+}
+int function(int x,int y)
+{
+    return(x-(x==y));
+}
+
+
+###
+#include<stdio.h>
+int _a_1234(int);
+int main(){
+    int n= _a_1234(4);
+    printf("%d\n",--n);
+    return 0;
+}
+int _a_1234(int n)
+{
+    return(n++);
+}
+
+
+###
+#include<stdio.h>
+int show(int);
+int main(){
+   int num = show(sizeof(float));
+   printf("value is%d",++num);
+   return 0;
+}
+int show(int returns)
+{
+    returns+=5.31;
+    return(returns);
+}
+
+
+###
+#include<stdio.h>
+int num =5;
+int main(){
+   fun();
+   fun();
+   return 0;
+int fun();
+
+    static int num= 2;
+    printf("%d",num);
+    num++;
+    return 0;
+}
+
+
+......datastructure are different ways of organizing data on your computer,that can be used effectively.........
+
+
+......time and space complexity is used to check performance of program.........
+
+
+####swaping
+
+
+#include<stdio.h>
+int main(){
+    int a,b;
+    printf("enter value of a:");
+    scanf("%d",&a);
+    printf("enter value of b");
+    scanf("%d",&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("value after swap a:%d\n",a);
+    printf("value of b after swap:%d",b);
+    return 0;
+}
+
+
+
+
+
+.........big o- is worst case scenario.
+         big omega -is best case scenario
+         big theta- bound of worst and best case..................................
+
+.....constant time is represted by big o it takes constant time to access first element............
+
+........o(n)-linear time
+
+.....o(logN)-logarithmic time.....
+
+...o(N**2)-quadratic time....
+....o(2**N)-exponential time....
+    
+          
+
+   
+
+
+
+
+

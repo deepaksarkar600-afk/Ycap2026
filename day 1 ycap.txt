@@ -1,0 +1,354 @@
+###wcp simple interest
+#include <stdio.h>
+
+int main() {
+    int p,r,t;
+    float si;
+    printf("enter principal amt\n");
+    scanf("%d",&p);
+    printf("enter the rate of intrest\n");
+    scanf("%d",&r);
+    printf("enter the duration\n");
+    scanf("%d",&t);
+    si=p*r*t/100;
+    printf("SI=%d",si);
+    // Write C code here
+    printf("Start small. Ship something.");
+
+    return 0;
+}
+
+
+
+
+
+###wcp for area of circle
+#include<stdio.h>
+#define PI 3.1452
+int main()  
+{  
+ float radius,area;  
+ printf("Enter radius of circle : ");  
+ scanf("%f",&radius);  
+ area= PI*radius*radius;  
+ printf("\nArea of Circle is %f",area);  
+return 0;  
+}
+
+
+
+
+###wcp for reverse 3 dig no.
+
+#include<stdio.h>
+void main(){
+    int num,a,b,c,reverse;
+    printf("\n enter any 3 dig no.");
+    scanf("%d",&num);
+    a=num%10;
+    num=num/10;
+    b=num%10;
+    num=num/10;
+    c=num;
+    reverse=(a*100+b*10+c*1);
+    printf("reverse is %d",reverse);
+}   
+
+
+
+
+###wcp for reverse 5 no.
+
+#include<stdio.h>
+void main(){
+    int num,a,b,c,d,e,reverse;
+    printf("\n enter any 5 dig no.");
+    scanf("%d",&num);
+    a=num%10;
+    num=num/10;
+    b=num%10;
+    num=num/10;
+    c=num%10;
+    num=num/10;
+    d=num%10;
+    num=num/10;
+    e=num;
+    reverse=(a*10000+b*1000+c*100+d*10+e*1);
+    printf("reverse is %d",reverse);
+} 
+
+....type casting
+##Implicit Typecasting
+#include<stdio.h>
+int main(){
+   char c1,c2;
+   int i1,i2;
+   float f1,f2;
+   c1='h';
+   i1=80.56;
+   f1=12.6;
+   c2=i1;
+   i2=f1;
+   printf("\nc2=%c,i2=%d",c2,i2);
+   f2=i1;
+   i2=c1;
+   printf("\nf2=%.2f,i2=%d",f2,i2);
+   return 0;
+}//c2=p //i2=12 //f2=80.00 //i2=72
+
+
+
+
+
+###Explicit Typecasting
+
+
+#include <stdio.h>
+
+int main() {
+    int x=5,y=2;
+    float p,q;
+    p=x/y;
+    printf("\np=%.2f",p);
+    q=(float)x/y;
+    printf("\n q=%.2f",q);
+ 
+}
+
+
+###wcp upper to lower case
+
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("enter cahrecter in upper case");
+    scanf("%c",&ch);
+    ch=ch+32;
+    printf("charachter in lower case :%c",ch);
+
+    return 0;
+}
+
+
+###wcp to increment
+
+
+#include <stdio.h>
+
+int main() {
+    int a=10;
+    printf("%d\n",a++);
+    printf("%d\n",a);
+    printf("%d\n",++a);
+    printf("%d\n",a);
+    printf("%d\n",a++);
+    printf("%d\n",++a);
+    printf("%d\n",a);
+
+}
+
+
+
+###wcp for decrement
+
+#include <stdio.h>
+
+int main() {
+    int a=10;
+    printf("%d\n",a--);
+    printf("%d\n",a);
+    printf("%d\n",--a);
+    printf("%d\n",a);
+    printf("%d\n",a--);
+    printf("%d\n",--a);
+    printf("%d\n",a);
+
+}
+
+
+
+###what is output?
+
+#include <stdio.h>
+#define FALSE -1
+#define NULL0
+#define TRUE 1
+int main() {
+   if(NULL){
+       printf("NULL");
+   }
+   else if (FALSE){
+       printf("TRUE");
+   }
+   else{
+       printf("FALSE");
+   }
+return 0;
+}
+
+
+###what is ouput?
+
+#include <stdio.h>
+int main() {
+    int i=0,j=0;
+    if(i++==j++){
+        printf("%d%d",i--,j--);
+    }
+    else{
+        printf("%d%d",i,j);
+    }
+    
+    return 0;
+}
+
+
+
+###what is output
+
+#include <stdio.h>
+int main() {
+   char str[8]="if block";
+   if(str=="if block"){
+       printf("if block executed");
+   }
+   else{
+       printf("else block executed");
+   }
+    return 0;
+}
+
+
+
+
+
+###what is op-
+...1
+#include <stdio.h>
+int main() {
+   char str[]="\0";
+   if(printf("%s",str)){
+       printf("inside if block ");
+   }
+   else{
+       printf("inside else block ");         //printf state or expression inside if block prints nothing.so the expression returns 0and else block gets executed,
+   }           
+    return 0;
+}
+
+....2
+#include <stdio.h>
+int main() {
+   char str[]="ashish\n";
+   if(printf("%s",str)){
+       printf("inside if block ");
+   }
+   else{
+       printf("inside else block ");
+   }
+    return 0;
+}
+
+
+
+###what is op--
+
+#include <stdio.h>
+int main() {
+   int i=5,j=4;
+   if(!printf("")){
+       printf("%d%d",i,j);
+   }
+   else{
+       printf("%d%d",i++,++j);
+   }
+    return 0;
+}
+
+
+###
+
+#include <stdio.h>
+int main() {
+   int i=1,j=0;
+   if(i--==j){
+       printf("i=%d",--i);
+   }
+   else{
+       printf("j=%d",++j);
+   }
+    return 0;
+}
+
+
+
+####what is op
+
+#include <stdio.h>
+int main() {
+   int i=2;
+   if(i==(1,2)){
+       printf("hello maam");
+   }
+   else{
+       printf("hello malhaar");
+   }
+    return 0;
+}
+
+
+
+####
+int main() {
+   if(sizeof(0)){
+       printf("hello maam");
+   }
+   else{
+       printf("hello sir");
+   }
+    return 0;
+}
+
+
+###
+#include <stdio.h>
+
+int main() {
+int i,j;
+ for(i=1,j=1;i<=3,j<=3;i++,j++){
+     printf("%d%d",i,j);
+ }
+
+    return 0;
+}
+
+
+###infinite loop
+
+#include <stdio.h>
+
+int main() {
+ for(;;){
+     printf("%d",67);
+ }
+
+    return 0;
+}
+
+
+###
+
+#include <stdio.h>
+
+int main() {
+ int x=-1;
+     while(x++==1){
+     printf("loop");
+     }
+     return 0;
+}
+
+
+
+###
