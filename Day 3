@@ -1,1 +1,109 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10 
+typedef struct{
+    int arr[MAX];
+    int top;
+}stack;
+void initialize(stack *s);
+int isFull(stack *s);
+int isEmpty(stack *s);
+void push(stack *s, int value);
+int pop(stack *s);
+int peek(stack *s);
+void display(stack *s);
+int main(){
+    stack s;
+    int choice, value;
+    initialize(&s);
+    
+    while(1){
+        printf("Stack Implementation with size\n");
+        printf("1. Push\n");
+        printf("2. POP\n");
+        printf("3. Peek (Top Element)\n");
+        printf("4. Display Stack\n");
+        printf("5. Exit\n");
+        printf("Enter your choice :");
+        scanf("%d",&choice);
+        
+        switch(choice)
+        {
+            case 1:
+            printf("Enter to push a value:");
+            scanf("%d",&value);
+            push(&s,value);
+            break;
+            
+            case 2:
+            value = pop(&s);
+            if(value !=-1){
+                printf("Popped element :%d\n",value);
+            }
+            break;
+            
+            case 3:
+            value = peek(&s);
+            if(value != -1){
+                printf("Top Elements : %d \n",value);
+            }
+            break;
+            
+            case 4:
+            display(&s);
+            break;
+            
+            case 5:
+            printf("Exiting program\n");
+            exit(0);
+            
+            default:
+            printf("Invalid choice please try again \n");
+            
+            
+        }
+    }
+    return 0;
+}
+void initialize(stack *s){
+    s ->top = -1;
+}
+int isFull(stack *s){
+    return s->top == MAX-1;
+}
+int isEmpty(stack *s){
+    return s->top == -1;
+}
+void push(stack *s,int value){
+    if(isFull(s)){
+       printf("Stack overflow! can not push %d \n",value);
+       return ;
+    }
+    s-> arr[s++->top] = value;
+    printf("%d Push to stack",value);
+}
+int pop(stack *s){
+    if(isEmpty(s)){
+        printf("Stack is empty\n");
+        return -1;
+    }
+    return s->arr[s->top--];
+}
+int peek(stack *s){
+    if(isEmpty(s)){
+        printf("Stack is empty\n");
+        return -1;
+    }
+    return s->arr[s->top];
+}
+void display(stack *s){
+    if(isEmpty(s)){
+        printf("Stack is empty");
+        return;
+    }
+    printf("Stack element top to bottom: \n");
+    for(int i= s->top;i>=0;i--){
+        printf("|%d|\n",s->arr[i]);
+    }
+    printf("\n");
+}
